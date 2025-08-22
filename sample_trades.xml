@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<trades>
+    <trade>
+        <tradeId>XMLT1001</tradeId>
+        <instrument>AAPL Stock</instrument>
+        <quantity>100</quantity>
+        <price>150.25</price>
+        <tradeDate>2023-01-15</tradeDate>
+        <settlementDate>2023-01-17</settlementDate>
+        <buyer>John Doe</buyer>
+        <seller>Jane Smith</seller>
+        <currency>USD</currency>
+    </trade>
+    <trade>
+        <tradeId>XMLT1002</tradeId>
+        <instrument>GOOG Bond</instrument>
+        <quantity>50</quantity>
+        <price>1200.00</price>
+        <tradeDate>2023-01-16</tradeDate>
+        <settlementDate>2023-01-18</settlementDate>
+        <buyer>Alice Johnson</buyer>
+        <seller>Bob Williams</seller>
+        <currency>EUR</currency>
+    </trade>
+</trades>
