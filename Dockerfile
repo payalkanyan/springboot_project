@@ -11,8 +11,9 @@ WORKDIR /app
 # Install Tesseract OCR, English language data, and Leptonica
 RUN apt-get update && apt-get install -y tesseract-ocr tesseract-ocr-eng libleptonica-dev && rm -rf /var/lib/apt/lists/*
 # Set Tesseract environment variables
-ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
-ENV TESS_HOME=/usr/bin/tesseract
+ENV TESSDATA_PREFIX=/usr/share/tessdata
+# Increase Java heap space for memory-intensive OCR operations
+ENV JAVA_OPTS="-Xmx384m"
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", ${JAVA_OPTS}, "-jar", "app.jar"]
