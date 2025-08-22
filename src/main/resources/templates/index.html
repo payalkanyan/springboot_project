@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trade Utility & Reconciliation Tools</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1><span style="color: #8a2be2; text-align: center;">TradeFlow Nexus</span></h1>
+        
+        <div class="marketing-text">
+            <h2 style="color: #000000;">Simplify, Analyze, Reconcile. Effortlessly.</h2>
+            <ul class="feature-list">
+                <li><h3>PDF OCR for vital trade information</h3></li>
+                <li><h3>Automated Excel reconciliation & arithmetic</h3></li>
+                <li><h3>Seamless XML data interchange</h3></li>
+                <li><h3>Powered by Spring Boot for reliability</h3></li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <a th:href="@{/upload}" class="button">PDF OCR Tool</a>
+            <a th:href="@{/reconcile}" class="button">Excel Reconciliation</a>
+            <a th:href="@{/xml}" class="button">XML Handling</a>
+        </div>
+
+        <div class="footer">
+            <p>Created with &hearts; by Payal</p>
+        </div>
+    </div>
+</body>
+</html>

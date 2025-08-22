@@ -1,0 +1,180 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* Reverted to original light blue/grey gradient */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 95%; /* Keep wider width */
+    width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.button {
+    display: inline-block;
+    background-color: #8a2be2; /* Purple */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #6a1aab; /* Darker purple on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link a {
+    color: #8a2be2; /* Purple */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link a:hover {
+    color: #6a1aab; /* Darker purple on hover */
+}
+
+/* Specific styles for forms and extracted text areas */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="file"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    width: 70%;
+    max-width: 400px;
+}
+
+.extracted-text-area {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.extracted-text-area h2 {
+    color: #8a2be2; /* Purple */
+    border-bottom: 2px solid #8a2be2; /* Purple underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e9ecef; /* Reverting to original light grey */
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Marketing text and feature list styling */
+.marketing-text h2 {
+    font-size: 2.5em;
+    color: #8a2be2; /* Purple */
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+}
+.highlight {
+    font-weight: bold;
+    color: #6a1aab; /* Darker purple for highlight */
+    font-style: italic;
+}
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.feature-list li {
+    background-color: #f3e5f5; /* Light purple background */
+    border: 1px solid #ce93d8; /* Purple border */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 40px); /* Two columns */
+    box-sizing: border-box;
+    max-width: calc(50% - 40px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-list li h3 {
+    color: #6a1aab; /* Darker purple for feature titles */
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.feature-list li p {
+    color: #555;
+    font-size: 0.95em;
+}

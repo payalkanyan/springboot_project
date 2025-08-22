@@ -2,23 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>PDF OCR Tool</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
-        .container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 800px; margin: auto; }
-        h1 { color: #333; text-align: center; margin-bottom: 30px; }
-        form { display: flex; flex-direction: column; gap: 15px; }
-        input[type="file"] { border: 1px solid #ddd; padding: 10px; border-radius: 4px; }
-        button { background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
-        button:hover { background-color: #0056b3; }
-        .message { margin-top: 20px; padding: 10px; border-radius: 4px; }
-        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-        .extracted-text-area { margin-top: 20px; padding: 15px; background-color: #e9ecef; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; border: 1px solid #ced4da; }
-        textarea { width: 100%; height: 200px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; resize: vertical; }
-    </style>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
     <div class="container">
+        <p class="nav-link"><a th:href="@{/}">Home</a></p>
         <h1>Upload PDF for OCR</h1>
 
         <div th:if="${message}" th:class="${message.contains('Error') ? 'message error' : 'message success'}">
@@ -28,7 +16,7 @@
         <form method="POST" action="/upload" enctype="multipart/form-data">
             <label for="pdfFile">Select PDF to upload:</label>
             <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
-            <button type="submit">Upload and Perform OCR</button>
+            <button type="submit" class="button">Upload and Perform OCR</button>
         </form>
 
         <div th:if="${trade}" class="extracted-text-area">
@@ -44,6 +32,9 @@
             <p><strong>Currency:</strong> <span th:text="${trade.currency}"></span></p>
             <p><strong>Database ID:</strong> <span th:text="${trade.id}"></span></p>
         </div>
+    </div>
+    <div class="footer">
+        <p>Created with &hearts; by Payal</p>
     </div>
 </body>
 </html>

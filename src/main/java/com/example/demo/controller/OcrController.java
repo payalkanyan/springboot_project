@@ -37,6 +37,11 @@ public class OcrController {
         this.xmlService = xmlService;
     }
 
+    @GetMapping("/")
+    public String showLandingPage() {
+        return "index"; // This will resolve to src/main/resources/templates/index.html
+    }
+
     @GetMapping("/upload")
     public String showUploadForm() {
         return "uploadForm";
